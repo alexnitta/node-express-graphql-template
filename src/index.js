@@ -15,7 +15,9 @@ import typeDefs from "./typeDefs";
 
 const app = express();
 
-const context = { /* database client goes here */ };
+const context = {
+  /* database client goes here */
+};
 
 const server = new ApolloServer({
   typeDefs,
