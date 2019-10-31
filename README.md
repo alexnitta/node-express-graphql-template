@@ -1,6 +1,19 @@
 # node-express-graphql-template
 
-This is a basic template for a Node / Exress / GraphQL app. The feature set is intentionally barebones to allow for flexibility when spinning up a new app. There is no database set up yet.
+This is a basic template for a Node / Exress / GraphQL app. The feature set is intentionally barebones to allow for flexibility when spinning up a new app. There is no database yet.
+
+## Getting Started
+
+After following either option below, you will have access to the GraphQL API at [http://localhost:4000/graphql](http://localhost:4000/graphql). You can also view the GraphQL Playground at this URL in your browser.
+
+### Run locally
+
+1. `npm i`
+2. `npm start`
+
+### Run with Docker
+
+1. `docker-compose up`
 
 ## Features
 
