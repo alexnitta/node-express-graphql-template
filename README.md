@@ -24,6 +24,9 @@ The project has been set up with `dotenv` to give accesss to environment variabl
 To start with, here is what you should have in your `.env` file.
 
 ```
+# This would be "production" in production
+NODE_ENV=development
+
 # This is optional; it can be whatever port you want to expose the GraphQL API on. Defaults to 4000.
 GRAPHQL_PORT=8000
 ```
