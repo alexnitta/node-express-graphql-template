@@ -13,9 +13,11 @@ import * as resolvers from './resolvers';
 import typeDefs from './typeDefs';
 
 const graphqlPort = process.env.GRAPHQL_PORT || 4000;
-const showPlayground = process.env.ENV === 'development';
+const showPlayground = process.env.NODE_ENV === 'development';
 const graphqlPath = '/graphql';
-const logger = pino({ level: process.env.ENV === 'development' ? 'debug' : 'info' });
+const logger = pino({
+    level: process.env.NODE_ENV === 'development' ? 'debug' : 'info',
+});
 const expressLogger = expressPino({ logger });
 
 const app = express();
