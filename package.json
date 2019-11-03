@@ -1,51 +1,61 @@
 {
-  "name": "node-express-graphql-template",
-  "version": "1.0.0",
-  "description": "A basic Node/Express/GraphQL template",
-  "main": "src/index.js",
-  "scripts": {
-    "start": "nodemon --watch src -e js,json,graphql --exec babel-node src/index.js | ./node_modules/.bin/pino-pretty",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/alexnitta/node-express-graphql-template.git"
-  },
-  "keywords": [
-    "node",
-    "express",
-    "starter",
-    "template",
-    "graphql",
-    "boilerplate"
-  ],
-  "author": "Alex Nitta",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/alexnitta/node-express-graphql-template/issues"
-  },
-  "homepage": "https://github.com/alexnitta/node-express-graphql-template#readme",
-  "husky": {
-    "hooks": {
-      "pre-commit": "pretty-quick --staged"
+    "name": "node-express-graphql-template",
+    "version": "1.0.0",
+    "description": "A basic Node/Express/GraphQL template, built with TypeScript",
+    "main": "src/index.js",
+    "scripts": {
+        "build": "babel src -d dist --extensions '.ts' --copy-files",
+        "check-types": "tsc",
+        "serve": "pm2 start dist/index.js",
+        "start": "nodemon --watch src -e ts,js,json,graphql --exec babel-node src/index.ts --extensions '.ts' | ./node_modules/.bin/pino-pretty",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/alexnitta/node-express-graphql-template.git"
+    },
+    "keywords": [
+        "node",
+        "express",
+        "starter",
+        "template",
+        "graphql",
+        "boilerplate"
+    ],
+    "author": "Alex Nitta",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/alexnitta/node-express-graphql-template/issues"
+    },
+    "homepage": "https://github.com/alexnitta/node-express-graphql-template#readme",
+    "husky": {
+        "hooks": {
+            "pre-commit": "pretty-quick --staged"
+        }
+    },
+    "dependencies": {
+        "apollo-server-express": "^2.9.7",
+        "dotenv": "^8.2.0",
+        "express": "^4.17.1",
+        "express-pino-logger": "^4.0.0",
+        "graphql-playground-middleware-express": "^1.7.12",
+        "pino": "^5.13.5",
+        "pm2": "^4.1.2"
+    },
+    "devDependencies": {
+        "@babel/cli": "^7.6.4",
+        "@babel/core": "^7.6.4",
+        "@babel/node": "^7.6.3",
+        "@babel/plugin-proposal-class-properties": "^7.5.5",
+        "@babel/plugin-proposal-object-rest-spread": "^7.6.2",
+        "@babel/preset-env": "^7.6.3",
+        "@babel/preset-typescript": "^7.6.0",
+        "@types/express-pino-logger": "^4.0.2",
+        "husky": "^3.0.9",
+        "nodemon": "^1.19.4",
+        "pino-pretty": "^3.2.2",
+        "prettier": "1.18.2",
+        "pretty-quick": "^2.0.0",
+        "typescript": "^3.6.4"
     }
-  },
-  "dependencies": {
-    "apollo-server-express": "^2.9.7",
-    "dotenv": "^8.2.0",
-    "express": "^4.17.1",
-    "express-pino-logger": "^4.0.0",
-    "graphql-playground-middleware-express": "^1.7.12",
-    "pino": "^5.13.5"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.6.4",
-    "@babel/node": "^7.6.3",
-    "@babel/preset-env": "^7.6.3",
-    "husky": "^3.0.9",
-    "nodemon": "^1.19.4",
-    "pino-pretty": "^3.2.2",
-    "prettier": "1.18.2",
-    "pretty-quick": "^2.0.0"
-  }
 }
