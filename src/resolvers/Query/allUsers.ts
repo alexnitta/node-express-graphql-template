@@ -1,4 +1,6 @@
-async function allUsers(parent, args, context) {
+import { Context } from '../../tsTypes/resolvers';
+
+async function allUsers(parent: object, args: object, context: Context) {
     // TODO implement a real query here, using the context to access a database
     return [
         {

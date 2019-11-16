@@ -1,4 +1,6 @@
-async function createUser(parent, args, context) {
+import { Context } from '../../tsTypes/resolvers';
+
+async function createUser(parent: object, args: object, context: Context) {
     // TODO implement a real mutation here, using the context to access a database
     return {
         id: 3,
