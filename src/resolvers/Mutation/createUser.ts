@@ -1,4 +1,4 @@
-async function createUser(parentValue, args, context) {
+async function createUser(parent, args, context) {
     // TODO implement a real mutation here, using the context to access a database
     return {
         id: 3,

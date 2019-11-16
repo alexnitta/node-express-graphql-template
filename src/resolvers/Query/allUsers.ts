@@ -1,4 +1,4 @@
-async function allUsers(parentValue, args, context) {
+async function allUsers(parent, args, context) {
     // TODO implement a real query here, using the context to access a database
     return [
         {
