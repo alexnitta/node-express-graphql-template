@@ -40,7 +40,7 @@
         "express-pino-logger": "^4.0.0",
         "graphql-playground-middleware-express": "^1.7.12",
         "pino": "^5.13.5",
-        "pm2": "^4.1.2"
+        "pm2": "^5.2.0"
     },
     "devDependencies": {
         "@babel/cli": "^7.6.4",
